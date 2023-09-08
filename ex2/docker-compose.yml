@@ -1,8 +1,7 @@
 version: '3'
 services:
   server:
-    image: cloudex2
-    container_name: cloudex2
+    build: ./server
     depends_on:
       - "mongodb"
     environment:
