@@ -1,0 +1,15 @@
+controller: 
+  replicaCount: 1
+whisk: 
+  ingress:
+  type: NodePort
+  apiHostName: 10.128.0.13
+  apiHostPort: 31001
+k8s: 
+  persistence:
+    enabled: false
+nginx:
+  httpsNodePort: 31001
+invoker:
+  containerFactory:
+    impl: "kubernetes"
